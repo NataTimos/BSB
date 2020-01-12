@@ -2,9 +2,12 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>Барбершоп &quot;Бородинский&quot;</title>
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet"  href="css/normalize.css">
+	<link rel="stylesheet"  href="css/style.css">
 </head>
-<body>
+<body class="inner-page">
 	<header class="main-header">
 		<nav class="main-navigation">
 			<a class="main-header-logo" href="index.html">
@@ -33,19 +36,19 @@
 		<section class="product-photos">
 			<h2 class="visually-hidden">Изображение товара</h2>
 			<p class="product-photo-full">
-				<img src="#" width="460" height="498" alt="Фото всего набора">
+				<img src="img/bbs-product-boc-big.jpg" width="460" height="498" alt="Фото всего набора">
 			</p>
 			<ul class="product-photo-preview">
-				<li><img src="#" width="140" height="149" alt="Фото в анфас"></li>
-				<li><img src="#" width="140" height="149" alt="Фото в профиль"></li>
-				<li><img src="#" width="140" height="149" alt="Фото отдельной части"></li>
+				<li><img src="img/bbs-product-boc-small1.jpg" width="140" height="149" alt="Фото в анфас"></li>
+				<li><img src="img/bbs-product-boc-small2.jpg" width="140" height="149" alt="Фото в профиль"></li>
+				<li><img src="img/bbs-product-boc-small3.jpg" width="140" height="149" alt="Фото отдельной части"></li>
 			</ul>						
 		</section>
 		<section class="product-info">
 			<h2 class="visually-hidden">Описание товара</h2>
 			<p class="product-availability">Есть в наличии</p>
 			<p class="product-article">Артикул: dexter-ae</p>
-			<p class="product-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque molestiae blanditiis excepturi alias nobis accusamus sint in, consectetur enim hic. Sed nesciunt ut, praesentium temporibus deserunt molestiae similique quas necessitatibus ad vitae incidunt, iusto aliquid non fuga quod eos! Ipsam qui ratione, fuga quod. Repudiandae amet est perspiciatis rem accusantium veritatis nesciunt fugit architecto. Ullam itaque culpa veritatis fuga, assumenda cupiditate ea voluptas atque et similique sequi consequuntur temporibus, numquam consequatur dicta ad facere placeat inventore reiciendis. </p>
+			<p class="product-text"> Travel Kit – необходимый аксессуар во время любого путешествия. В аккуратной кожаной сумке находится все, что нужно для бритья и ухода за кожей во время рабочей поездки или отдыха: средство для умывания, увлажняющий крем, крем для бритья, крем после бритья, шампунь. Набор также может стать отличным подарком. </p>
 			<p>
 				<b>2 900</b>
 				<a class="button" href="">Купить</a>
@@ -85,9 +88,37 @@
 	</footer>
 	<section class="modal modal-login">
 		<h2>Личный кабинет</h2>
+
 		<p>Введите свой логин и пароль</p>
-	<!-- Здесь будет форма -->
-		<span class="modal-close">X</span>
+		<form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+			<p>
+				<label class="vissually-hidden" for="user-login">Логин</label>
+				<input class="login-icon-user" id="user-login" type="text" name="login" placeholder="Логин">
+			</p>
+			<p>
+				<label class="vissually-hidden" for="user-password">Пароль</label>
+				<input id="user-password" class="login-icon-password" type="password" name="password" placeholder="Пароль">
+			</p>
+			<p class="login-password-info">
+				<label class="login-checkbox">
+					<input type="checkbox" name="remember" class="vissually-hidden">
+					<span class="checkbox-indicator"></span>
+					Запомните меня
+				</label> 
+				<a href="#" class="restore">Я забыл пароль!</a>
+			</p>
+			<button class="button" type="submit">Войти</button>
+		</form>
+
+		<button class="modal-close" type="button">Закрыть</button>
+	</section>
+
+	<section class="modal modal-map">
+		<h2 class="vissually-hidden">Как до нас добраться?</h2>
+		<p>
+			<img src="img/bbs-modal-map.png" width="780" height="560" alt="Офис компании по адресу ул. Большая Конюшенная, 19/8, Санкт-Петербург">
+		</p>
+		<button class="modal-close" type="button">X</button>
 	</section>
 </body>
 </html>
