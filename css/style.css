@@ -88,7 +88,7 @@ a {
 	color: #000;
 
 	background-color: #f8f5f2;
-	background-image: url("img/bbs-light-background.jpg");
+	background-image: url("../img/bbs-background-light.jpg");
 	background-position: 0 0;
 	background-repeat: repeat;
 }
@@ -126,7 +126,7 @@ a {
 	color: #fff;
 
 	background-color: #212121;
-	background-image: url(#);
+	background-image: url(../img/bbs-background-dark.jpg);
 	background-position: 0 0;
 	background-repeat: repeat;
 }
@@ -167,7 +167,7 @@ a {
 	color: #000;
 
 	background-color: #f8f3f0;
-	background-image: url("#");
+	background-image: url("../img/bbs-background-light.jpg");
 	background-position: 0 0;
 	background-repeat: repeat;
 }
