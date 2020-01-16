@@ -15,6 +15,14 @@ body {
 	background-repeat: no-repeat;
 }
 
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
 a {
 	text-decoration: none;
 }
@@ -352,6 +360,195 @@ a {
 .product-info ul {
 	list-style: none;
 }
+
+/*построение сетки*/
+
+html, body {
+	min-height: 1750px;
+	min-width: 1122px;
+}
+
+/*хедер*/
+.main-header {
+	margin-bottom: 75px;
+
+	outline: 1px solid white;
+}
+
+.main-navigation {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	background-color: transparent;
+
+	outline: 1px solid blue;
+}
+
+.main-navigation-wrapper {
+	
+	width: 100%;
+	margin-bottom: 60px;
+
+	background-color: #000;
+
+	border: 1px solid green;
+}
+
+.main-navigation-wrapper .container {
+	border: 1px solid red;
+
+	display: flex;
+	justify-content: space-between;
+}
+
+.site-navigation {
+	margin: 0;
+	padding: 0;
+	
+	width: 620px;
+
+	display:flex;
+	justify-content: space-between;
+
+	outline: 1px solid lightblue;
+	
+}
+
+.site-navigation li {
+	align-items: center;
+}
+
+.user-navigation {
+	margin: 0;
+	padding: 0;
+
+	width: 140px;
+
+	outline: 1px solid lightblue;
+}
+
+.main-header-logo {
+	order: 1;
+	
+}
+
+.container {
+	margin: 0 auto;
+	padding: 0 10px;
+	width: 940px;
+
+	border: 1px solid yellow;
+}
+
+/*контент*/
+
+.features {
+	margin-bottom: 80px;
+}
+
+.features-list {
+	display: flex;
+	justify-content: space-between;
+	margin: 0;
+	padding: 0;
+
+	outline: 1px solid orange;
+}
+
+.features-item {
+	width: 300px;
+
+	outline: 1px solid yellow;
+}
+
+.index-columns {
+	outline: 1px solid violet;
+
+	display: flex;
+	justify-content: space-between;
+	padding: 50px 80px;
+	margin-bottom: 30px;
+}
+
+.news {
+	width: 380px;
+}
+
+.gallery {
+	width: 300px;
+}
+
+.contacts {
+	width: 380px;
+}
+
+.appointment {
+	width: 300px;
+}
+
+/*футер*/
+
+.main-footer {
+	outline: 1px solid green;
+
+	margin-top: 65px;
+}
+
+.main-footer .container {
+	display: flex;
+}
+
+.footer-contacts {
+	margin: 0;
+	width: 320px;
+	margin-right: 80px;
+}
+
+.footer-socials {
+	width: 145px;
+}
+
+.footer-copyright {
+	margin: 0;
+	width: 150px;
+	margin-left: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
