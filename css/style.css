@@ -20,11 +20,13 @@ a {
   text-decoration: none;
 }
 
+/*голобальный стиль для всех картинок, чтобы не вылезало за родительский блок*/
 img {
   max-width: 100%;
   height: auto;
 }
 
+/*обновленный visually-hidden*/
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
@@ -57,6 +59,10 @@ input[type="radio"].visually-hidden {
 }
 
 .button {
+  display: inline-block;
+  margin-right: 16px;
+  padding: 10px 30px;
+
   font: inherit;
 
   text-align: center;
@@ -72,6 +78,13 @@ input[type="radio"].visually-hidden {
 .button:focus,
 .button:active {
   background-color: #663d15;
+}
+
+.button.disabled,
+.button:disabled {
+  cursor: default;
+  opacity: 0.5;
+  background-color: #000;
 }
 
 .main-navigation {
@@ -117,8 +130,8 @@ input[type="radio"].visually-hidden {
   flex-wrap: wrap;
   width: 620px;
   
-  background: rgba(234, 255, 45, 0.2);
-  box-shadow: inset 0 0 0 2px rgb(234, 255, 45);
+  /*background: rgba(234, 255, 45, 0.2);
+  box-shadow: inset 0 0 0 2px rgb(234, 255, 45);*/
 }
 
 .user-navigation {
@@ -131,7 +144,7 @@ input[type="radio"].visually-hidden {
   display: block;
   padding: 25px 20px;
 
-  vertical-align: middle;
+  
   color: #ffffff;
 }
 
@@ -146,8 +159,9 @@ input[type="radio"].visually-hidden {
   position: relative;
   padding-left: 50px;
   
-  background: rgba(234, 255, 45, 0.2);
-  box-shadow: inset 0 0 0 2px rgb(234, 255, 45);
+  /*подстветка меню входа*/
+  /*background: rgba(234, 255, 45, 0.2);
+  box-shadow: inset 0 0 0 2px rgb(234, 255, 45);*/
 }
 
 .login-link::before {
@@ -160,7 +174,7 @@ input[type="radio"].visually-hidden {
   width: 16px;
   height: 18px;
   
-  background-image: url("img/login.svg");
+  background-image: url("../img/login.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   
@@ -197,8 +211,9 @@ input[type="radio"].visually-hidden {
   
   text-align: center;
   
-  background: rgba(255, 45, 82, 0.2);
-  box-shadow: 0 0 0 3px rgb(255, 45, 82);
+  /*подсветка элементов, в раазметке не нужна*/
+  /*background: rgba(255, 45, 82, 0.2);
+  box-shadow: 0 0 0 3px rgb(255, 45, 82);*/
 }
 
 .feature-item h3 {
@@ -210,7 +225,27 @@ input[type="radio"].visually-hidden {
   font-size: 30px;
   line-height: 42px;
   
-  background: rgba(255, 45, 82, 0.5);
+  /*background: rgba(255, 45, 82, 0.5);*/
+}
+
+.feature-item h3::after {
+  content: "";
+
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+
+  width: 20px;
+  height: 20px;
+  margin-left: -10px;
+
+  background-color: #fff;
+
+  transform: rotate(45deg);
+}
+
+.feature-item p {
+  margin: 0 10px;
 }
 
 .index-columns {
@@ -222,12 +257,17 @@ input[type="radio"].visually-hidden {
   color: #000000;
 
   background-color: #f8f5f2;
-  background-image: url("../img/bbs-background-light.jpg");
-  background-position: 0 0;
-  background-repeat: repeat;
+  background-image: 
+    url(../img/bbs-main-vertical-shaddow.png),
+    url("../img/bbs-background-light.jpg");
+  background-position: center, 0 0;
+  background-repeat: no-repeat, repeat;
 }
 
 .index-columns h2 {
+  margin: 0;
+  margin-bottom: 25px;
+
   font-size: 30px;
   line-height: 42px;
 }
@@ -238,6 +278,14 @@ input[type="radio"].visually-hidden {
 
 .news-list {
   list-style: none;
+
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 0;  
+}
+
+.news-item p {
+  margin: 0;
 }
 
 .news-item time {
@@ -249,19 +297,86 @@ input[type="radio"].visually-hidden {
 }
 
 .gallery-content {
+  height: 164px;
+  margin: 0;
+
   background-color: #cccccc;
   border: 7px solid #ffffff;
+}
+
+.gallery-content img {
+  width: 286px;
+  height: 164px;
+}
+
+.gallery-container {
+  position: relative;
+
+  height: 260px;
+}
+
+.gallery-button {
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+
+  width: 140px;
+  margin: 0;
+}
+
+.gallery-button-back {
+  left: 0;
+}
+
+.gallery-button-next {
+  right: 0;
 }
 
 .contacts {
   width: 380px;
 }
 
+.contacts p {
+  margin: 0;
+  margin-bottom: 25px;
+}
+
 .appointment {
   width: 300px;
 }
 
+.appointment-info {
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.appointment-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.appointment-item {
+  width: 140px;
+  margin: 0;
+  margin-bottom: 10px;
+
+}
+
+.appointment-item label {
+  display: block;
+  margin-bottom: 9px;
+  margin-left: 15px;
+}
+
 .appointment-item input {
+  box-sizing: border-box;
+  width: 140px;
+  padding-top: 8px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 7px;
+
   font: inherit;
 
   background-color: transparent;
@@ -270,6 +385,12 @@ input[type="radio"].visually-hidden {
 
 .appointment-item input:focus {
   border-color: #663d15;
+}
+
+.appointment .button {
+  width: 100%;
+  margin-right: 0;
+  margin-top: 10px;
 }
 
 .page-title {
@@ -501,17 +622,49 @@ input[type="radio"].visually-hidden {
 }
 
 .footer-social {
+  /*display: flex;
+  align-items: center;
+  justify-content: center;*/
   width: 145px;
   
   text-align: center;
 }
 
 .footer-social ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 141px;
+  margin: 0 auto;
+  padding: 0;
+
   list-style: none;
 }
 
 .social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 43px;
+  height: 43px;
+
   color: #ffffff;
+  background-color: #000;
+}
+
+.social-button:hover,
+.social-button:focus {
+  background-color: #fff;
+}
+
+.social-button:hover path,
+.social-button:focus path {
+  fill: #000;
+}
+
+.footer-social b {
+  display: block;
+  margin-bottom: 15px;
 }
 
 .footer-copyright {
@@ -519,6 +672,16 @@ input[type="radio"].visually-hidden {
   margin: 0;
   margin-left: auto;
   text-align: center;
+}
+
+.footer-copyright b {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.footer-copyright .button {
+  display: block;
+  margin-right: 0;
 }
 
 .footer-copyright .button:hover,
