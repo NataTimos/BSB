@@ -1148,6 +1148,9 @@ input[type='radio'].visually-hidden
 
 .modal-login
 {
+
+    display: none;
+
     top: 120px;
     left: 50%;
 
@@ -1313,6 +1316,8 @@ input[type='radio'].visually-hidden
 
 /*модальная карта*/
 .modal-map {
+  display: none;
+
   top:50%;
   left: 50%;
   width: 766px;
@@ -1322,6 +1327,6 @@ input[type='radio'].visually-hidden
   border: 7px solid white;
 }
 
-.modal-map p{
+.modal-map p {
   margin: 0;
 }
